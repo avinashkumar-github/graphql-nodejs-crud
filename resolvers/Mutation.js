@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from "uuid";
 const Mutation = {
   createUser(parent, args, { db }, info) {
     const emailExist = db.users.some((user) => {
@@ -75,6 +76,23 @@ const Mutation = {
     const deletedComment = db.comments.splice(commentExist, 1);
 
     return deletedComment[0];
+  },
+  updateComment(parent, args, { db }, info) {
+    const commentIndex = db.comments.findIndex((comment) => {
+      return comment.id == args.id;
+    });
+
+    if (commentIndex == -1) {
+      throw new Error("No comment found!!");
+    }
+
+    const selectedComment = db.comments[commentIndex];
+
+    selectedComment.title = args.data.title;
+
+    db.comments[commentIndex] = selectedComment;
+
+    return selectedComment;
   }
 };
 

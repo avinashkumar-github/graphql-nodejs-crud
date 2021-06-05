@@ -1,5 +1,5 @@
 import { GraphQLServer } from "graphql-yoga";
-import { v4 as uuid } from "uuid";
+
 import db from "./data/db.js";
 import Query from "./resolvers/Query.js";
 import Mutation from "./resolvers/Mutation.js";
