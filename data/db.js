@@ -48,11 +48,11 @@ const comments = [
     id: 1,
     title: "Nice Post one",
     author: 1,
-    postid: 2
+    post: 2
   },
-  { id: 2, title: "Nice POst 2", author: 1, postid: 1 },
-  { id: 3, title: "Nice post three", author: 2, postid: 1 },
-  { id: 4, title: "Nice post four", author: 3, postid: 2 }
+  { id: 2, title: "Nice POst 2", author: 1, post: 1 },
+  { id: 3, title: "Nice post three", author: 2, post: 1 },
+  { id: 4, title: "Nice post four", author: 3, post: 2 }
 ];
 
 const db = {
