@@ -41,7 +41,7 @@ const Mutation = {
 
     return post;
   },
-  createComment(parent, args, { db }, info) {
+  createComment(parent, args, { db, pubsub }, info) {
     const userExist = db.users.some((user) => user.id == args.author);
     if (!userExist) {
       throw new Error("User not found!!");
@@ -61,6 +61,9 @@ const Mutation = {
     };
 
     db.comments.push(comment);
+
+    // pubsub.publish(`comment ${args.post}`, { comment: comment });
+    pubsub.publish(`comment ${args.post}`, { comment });
 
     return comment;
   },
