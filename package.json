@@ -1,0 +1,26 @@
+{
+  "name": "graphql-nodejs-crud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js -e js, graphql ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avinashkumar-github/graphql-nodejs-crud.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avinashkumar-github/graphql-nodejs-crud/issues"
+  },
+  "homepage": "https://github.com/avinashkumar-github/graphql-nodejs-crud#readme",
+  "dependencies": {
+    "graphql-yoga": "^1.18.3",
+    "uuid": "^8.3.2"
+  }
+}
